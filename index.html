@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .wrapper {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        button {
+            padding: 0.5rem 2rem;
+            margin: 1rem 0;
+            cursor: pointer;
+        }
+        input,
+        li {
+            margin-block: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+        <form class="form" name="myForm" method="get">
+            <b>Form</b>
+            <ul>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required />
+                </li>
+                <li>
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname" id="surname" required />
+                </li>
+                <li>
+                    <label for="birthday">Date of birth</label>
+                    <input type="text" name="birthday" id="birthday" required />
+                </li>
+                <li>
+                    <b>Gender</b>
+                    <br />
+                    <input type="radio" name="gender" id="male" checked />
+                    <label for="male">Male</label>
+                    <br />
+                    <input type="radio" name="gender" id="female" required />
+                    <label for="female">Female</label>
+                </li>
+                <li>
+                    <label for="city">City</label>
+                    <select id="city" name="city">
+                        <option value="odesa" selected>Odesa</option>
+                        <option value="kiyv">Kiyv</option>
+                        <option value="kharkiv">Kharkiv</option>
+                    </select>
+                </li>
+                <li>
+                    <b>Languages</b>
+                    <br />
+                    <input type="checkbox" name="eng" id="eng" checked />
+                    <label for="eng">English</label>
+                    <br />
+                    <input type="checkbox" name="uk" id="uk" />
+                    <label for="uk">Ukrainian</label>
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                    <textarea
+                            name="address"
+                            id="address"
+                            cols="30"
+                            rows="10"
+                            required
+                    ></textarea>
+                </li>
+            </ul>
+
+            <button class="form__btn" type="submit">Save</button>
+        </form>
+        <div id="info">
+            <table id="table"></table>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
